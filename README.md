@@ -1,4 +1,4 @@
-# datascience_template
+# workspace_template
 
 A template file structure for an OPM hosted data science development environment, intended to be used along with the docker data science image available at `riazarbi/jupyter_from_repo`. 
 
