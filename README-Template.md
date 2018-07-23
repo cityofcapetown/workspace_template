@@ -32,5 +32,8 @@ password:<your_email_password>
 ## Owner Details
 
 Your Name – YourEmail@example.com
+your Role - Your Department - Your Organization
 
-Any usage/collaboration instructions for people who browse this codebase. For instance, "I never ogt very far with this project. If you want to continue development get hold of me and I'll transfer repo ownership to you."
+> Any usage/collaboration instructions for people who browse this codebase. For instance, 
+
+I never got very far with this project. If you want to continue development get hold of me and I'll transfer repo ownership to you.
