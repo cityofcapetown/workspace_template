@@ -1,7 +1,12 @@
 # Project Name
-> Short blurb about what your product does.
+> Short blurb about what your product does. For instance:
 
-One to two paragraph statement about your product and what it does.
+This codebase contains a jupyter notebook that will read all your emails and compile a PDF report that contains alalytics about the following:
+
+* Your most frequently contacted contacts
+* A subject line word cloud
+* A count of how many words you have emailed in the last 3 months
+* A chart showing the most contacted organizations in your email history
 
 ## Changes to base image
 > Mention the base image that your started with.
