@@ -1,11 +1,18 @@
 # datascience_template
 
-A template file structure for an OPM hosted data science development environment.
+A template file structure for an OPM hosted data science development environment, intended to be used along with the docker data science image available at `riazarbi/jupyter_from_repo`. 
 
-## Rationale for this repositoriy's existence
-This repository is intended to be used along with the docker data science image available at `riazarbi/jupyter_from_repo`. The primary reason for its existence is to impose a folder structure and supply the requisite .gitignore files to your environment.
+## Rationale for this repository's existence
+
+The primary reason for its existence is to impose a folder structure and supply the requisite .gitignore files to your environment to promote predictable, well-formed coding behaviour. Good coding practices include -
+
+* Regular committing of code to a code versioning system.
+* Embedding data pulls from source in the code rather than referring to local, unauditalbe data.
+* Regular offsite backups.
+* Avoidance of committing sensitive information or large files to git.
 
 ## How this repository behaves
+
 1. Anything you put in the `tempdata` folder will not be committed or pushed to your remote git repo. So put data that you don't want to share in this folder. Ideally the contents of this folder should be pushed to a backup so that you can replicate your project easily by re-cloning your git repo and repopulating the data folder.
 2. Anything you put in the `secrets` folder will not be committed or pushed to your remote git repo. Use this folder to store secrets (like usernames, passwords, configs etc). As with the tempdata folder, back this up somewhere private.
 3. Anything you put in the root folder (ie the folder that this `README` file resides in) or any other folder you create will be pushed to the remote git repository. So if you commit and push this regularly you are backing up your code. If your remote repository is public, everyone will be able to see these files.
