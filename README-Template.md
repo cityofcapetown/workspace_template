@@ -6,10 +6,6 @@ One to two paragraph statement about your product and what it does.
 ## Changes to base image
 List any packages added to the environment while developing the project
 
-
-
-```
-
 ## Deployment instructions
 List anything you have to do to a newly cloned repository to get it running. For example:
 
