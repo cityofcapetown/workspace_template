@@ -4,10 +4,16 @@
 One to two paragraph statement about your product and what it does.
 
 ## Changes to base image
-List any packages added to the environment while developing the project
+> Mention the base image that your started with.
+This codebase was developed from the riazarbi/jupyter_from_repo docker image, which was accessed on the 23rd July 2018.
+> List any packages added to the environment while developing the project so that somebody can replicate the environment from the same source docker image. 
+I added the following python packages:
+* pandas
+* keyring
+* unicodecode
 
 ## Deployment instructions
-List anything you have to do to a newly cloned repository to get it running. For example:
+> List anything you have to do to a newly cloned repository to get it running. For instance:
 
 1. Clone this repository to your environment
 2. Launch a jupyter notebook
