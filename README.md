@@ -1,4 +1,7 @@
-# datascience_template
+# workspace_template
+
+## If you have forked this repo, you should replace this README.md file with the README-Template.md file.
+### Then populate your new README with useful information about the project.
 
 A template file structure for an OPM hosted data science development environment, intended to be used along with the docker data science image available at `riazarbi/jupyter_from_repo`. 
 
