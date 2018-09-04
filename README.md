@@ -1,36 +1,44 @@
-# workspace_template
+# Project Name
+> Short blurb about what your product does. For instance:
 
-## If you have forked this repo, you should replace this README.md file with the README-Template.md file.
-### Then populate your new README with useful information about the project.
+This codebase contains a jupyter notebook that will read all your emails and compile a PDF report that contains alalytics about the following:
 
-A template file structure for an OPM hosted data science development environment, intended to be used along with the docker data science image available at `riazarbi/jupyter_from_repo`. 
+* Your most frequently contacted contacts
+* A subject line word cloud
+* A count of how many words you have emailed in the last 3 months
+* A chart showing the most contacted organizations in your email history
 
-## Rationale for this repository's existence
+## Changes to base image
+> Mention the base image that your started with.
 
-The primary reason for its existence is to impose a folder structure and supply the requisite .gitignore files to your environment to promote predictable, well-formed coding behaviour. Good coding practices include -
+This codebase was developed from the riazarbi/jupyter_from_repo docker image, which was accessed on the 23rd July 2018.
 
-* Regular committing of code to a code versioning system.
-* Embedding data pulls from source in the code rather than referring to local, unauditalbe data.
-* Regular offsite backups.
-* Avoidance of committing sensitive information or large files to git.
+> List any packages added to the environment while developing the project so that somebody can replicate the environment from the same source docker image. 
 
-## How this repository behaves
+I added the following python packages:
+* pandas
+* keyring
+* unicodecode
 
-1. Anything you put in the `tempdata` folder will not be committed or pushed to your remote git repo. So put data that you don't want to share in this folder. Ideally the contents of this folder should be pushed to a backup so that you can replicate your project easily by re-cloning your git repo and repopulating the data folder.
-2. Anything you put in the `secrets` folder will not be committed or pushed to your remote git repo. Use this folder to store secrets (like usernames, passwords, configs etc). As with the tempdata folder, back this up somewhere private.
-3. Anything you put in the root folder (ie the folder that this `README` file resides in) or any other folder you create will be pushed to the remote git repository. So if you commit and push this regularly you are backing up your code. If your remote repository is public, everyone will be able to see these files.
-4. The .gitignore file is set to ignore and R and python working files (like .Rdata or .Rproj files).
+## Deployment instructions
+> List anything you have to do to a newly cloned repository to get it running. For instance:
 
-## Intended use case
-### While developing code
-1. Fork this repository and rename to something useful, like `MINST_random_forest`.
-2. Download the docker image from the above repository.
-3. Start a container with the flag `-e GITREPO=<repo url>`. The container will clone the repo into the working directory.
-4. Access the jupyter notebook at the URL provided by the container console (see https://jupyter-docker-stacks.readthedocs.io/en/latest/using/running.html#using-the-docker-cli).
-5. Include your data acquisition steps programatically (that is, don't upload csvs, `wget` csvs etc so that the data can be retreived programatically).
-6. Commit and push your code regularly to avoid disappointment.
+1. Clone this repository to your environment
+2. Launch a jupyter notebook
+3. Create a file called `credentials` in your `secrets` folder with the following contents:
+```
+email_address:<youremail@example.com>
+password:<your_email_password>
+```
+4. Open `project_code.ipynb`
+5. Run the cells from top to bottom
+6. The code will output a PDF report under the root directory. You can download it and distribute it.
 
-When you are done developing, push your code and shut down the container.
+## Owner Details
 
-### Deploying code
-When you are ready to deploy your project, simply download the docker image to your production machine and start a container with the same `GITREPO` flag. Your new container will spin up in the production environment ready to go.
+Your Name – YourEmail@example.com
+your Role - Your Department - Your Organization
+
+> Any usage/collaboration instructions for people who browse this codebase. For instance, 
+
+I never got very far with this project. If you want to continue development get hold of me and I'll transfer repo ownership to you.
